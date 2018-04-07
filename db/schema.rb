@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403005411) do
+ActiveRecord::Schema.define(version: 20180406222820) do
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "product_id"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20180403005411) do
     t.string "name"
     t.string "description"
     t.decimal "price", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "temporders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "user_id"
+    t.integer "product_id"
+    t.string "session_id"
+    t.boolean "ifFinal", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

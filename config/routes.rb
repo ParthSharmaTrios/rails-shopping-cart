@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   #
 
   root to: "home#front"
+
+  resources :products
+
+  resources :orders
+  resources :temporders
+
 end

@@ -1,0 +1,24 @@
+<div class="row" >
+
+<div class="col-lg-6">
+  <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+</div>
+<div class="col-lg-6">
+  <h2><%= @Product.name %></h2>
+  <p><%= @Product.description %></p>
+
+  <%= form_for([@temporder,Temporder.new]) do |form| %>
+
+
+    <%= form.hidden_field :product_id, value: @Product.id %>
+    <%= form.hidden_field :total, value: @Product.price %>
+    <%= form.hidden_field :session_id, value: session[:session_id] %>
+
+
+
+
+    <%= form.submit 'order' %>
+
+  <%end%>
+</div>
+</div>

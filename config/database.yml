@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: an9d6bg3e580jzjx
-  username: shop
-  password: <%= ENV['SHOP_DATABASE_PASSWORD'] %>
+  username: hf6ilkdfdr1gesfr
+  password: gqxuxqhnccajsyji
